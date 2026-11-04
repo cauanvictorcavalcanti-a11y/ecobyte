@@ -29,7 +29,7 @@ button {
 /* === 3. TIPOGRAFIA === */ 
 
 :root {
-    --font-title: "Barlow Condensed", sans-serif;
+    --font-title: "Barlow Condensed";
     --font-body: "Inter", sans-serif;
     --font-data: "IBM Plex Mono", monospace;
     --font-source: "Source Sans 3", sans-serif;
@@ -59,12 +59,16 @@ body, p, li {
 nav {
     background-color: var(--cor-terciaria);
     display: flex;
-    gap: 10px;
+    flex-direction: row;
+    gap: 20px;
     border-bottom: 4px solid var(--cor-matriz);
     padding: 10px 40px;
     justify-content: space-between;
     position: fixed;
+    z-index: 100;
     width: 100%;
+    top: 0;
+    left: 0;
 
 }
 nav h1 {
@@ -91,6 +95,18 @@ nav h1 {
     height: 40px;
     object-fit: contain;
 }
+.espaco {
+    margin-bottom: 150px;
+}
+
+
+#nometema{
+
+font-family:  "Barlow Condensed";
+
+}
+
+
 /* === 5.1 ... === */ 
 
 
