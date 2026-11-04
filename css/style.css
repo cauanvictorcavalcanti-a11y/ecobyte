@@ -1,0 +1,96 @@
+/* === 1. VARIAVEIS GLOBAIS (TOKENS DE DESIGN) === */ 
+:root { 
+    /* Criadas ao longo do Caminho */
+
+    /* Cores */
+        --cor-matriz: #66b56b;
+        --cor-miuda: #176B45; 
+        --cor-secundaria: #FFFFFF;
+        --cor-terciaria: #0B0F0D;
+        --cor-linkefonte: #59665E;
+}
+/* === 2. RESET E BASE === */ 
+
+* {box-sizing: border-box;}
+html { font-size: 1rem; } 
+
+button {
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    color: var(--cor-matriz);
+    font-size: 1.4rem;
+    font-family: var(--font-source);
+    font-weight: 500;
+}
+
+/* 2.1 LINK BASE */
+
+/* === 3. TIPOGRAFIA === */ 
+
+:root {
+    --font-title: "Barlow Condensed", sans-serif;
+    --font-body: "Inter", sans-serif;
+    --font-data: "IBM Plex Mono", monospace;
+    --font-source: "Source Sans 3", sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-title);
+    font-weight: 100;
+}
+
+body, p, li {
+    font-family: var(--font-body);
+}
+
+.data, .coordinates, .statistics {
+    font-family: var(--font-data);
+}
+
+.references, .citations, .image-credits {
+    font-family: var(--font-source);
+}
+
+
+/* === 4. COMPONENTES REUTILIZAVEIS === */ 
+
+/* === 5. CABECALHO E NAVEGACAO === */ 
+nav {
+    background-color: var(--cor-terciaria);
+    display: flex;
+    gap: 10px;
+    border-bottom: 4px solid var(--cor-matriz);
+    padding: 10px 40px;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+
+}
+nav h1 {
+    color: var(--cor-matriz);
+}
+.cabecalho {
+
+    display: flex;
+    gap: 200px;
+    
+}
+.explorer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.explorer:hover {
+    transition: 0.3s;
+    transform: scale(1.05);
+    font-weight: 600;
+}
+.explorer img {
+        width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+/* === 5.1 ... === */ 
+
+
