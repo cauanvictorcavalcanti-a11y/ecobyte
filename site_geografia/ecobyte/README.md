@@ -1,2 +1,0 @@
-# ecobyte
-official site
