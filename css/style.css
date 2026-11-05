@@ -1,182 +1,141 @@
+
+
+/* =================================================== 
+STYLE.CSS — [PenteFino] — [Fake News & Desinformação] 
+Grupo: [
+        Cauan Victor Andrade Cavalcanti
+        Miguel Godke Silva
+        Enzo Oliveira Ricci
+        Ruan Ribeiro Prospero
+        Enzo Novais Silva
+] 
+Data: [27/06/2026] 
+=================================================== */ 
+
 /* === 1. VARIAVEIS GLOBAIS (TOKENS DE DESIGN) === */ 
 :root { 
     /* Criadas ao longo do Caminho */
 
     /* Cores */
         --cor-matriz: #66b56b;
-        --cor-miuda: #176B45; 
+        --cor-matriz-escura: #176B45; 
         --cor-secundaria: #FFFFFF;
         --cor-terciaria: #0B0F0D;
         --cor-linkefonte: #59665E;
+        --cor-alerta: #d99611;
 }
 /* === 2. RESET E BASE === */ 
 
 * {box-sizing: border-box;}
 html { font-size: 1rem; } 
 
-button {
-    cursor: pointer;
-    background: transparent;
-    border: none;
-    color: var(--cor-matriz);
-    font-size: 1.4rem;
-    font-family: var(--font-source);
-    font-weight: 500;
-}
-
-/* 2.1 LINK BASE */
-
 /* === 3. TIPOGRAFIA === */ 
 
 :root {
-    --font-title: "Barlow Condensed";
+    --font-title: 'JetBrains Mono', monospace;
     --font-body: "Inter", sans-serif;
     --font-data: "IBM Plex Mono", monospace;
     --font-source: "Source Sans 3", sans-serif;
 }
 
-h1, h2, h3 {
+/* == 3.1 ADCIONANDO A TIPOGRAFIA NAS TAGS */
+
+a {
+    text-decoration: none;
+    color: var(--cor-matriz);
     font-family: var(--font-title);
-    font-weight: 100;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-body, p, li {
-    font-family: var(--font-body);
-}
-
-.data, .coordinates, .statistics {
-    font-family: var(--font-data);
-}
-
-.references, .citations, .image-credits {
-    font-family: var(--font-source);
+a:hover {
+    color: var(--cor-linkefonte);
+    font-weight: bold;
+    transform: scale(1.08);
 }
 
 
 /* === 4. COMPONENTES REUTILIZAVEIS === */ 
 
 /* === 5. CABECALHO E NAVEGACAO === */ 
-nav {
-    background-color: var(--cor-terciaria);
+.icone {
     display: flex;
-    flex-direction: row;
-    gap: 20px;
-    border-bottom: 4px solid var(--cor-matriz);
-    padding: 20px 40px;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+}
+.secao {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    transition: gap 0.4s ease;
+}
+
+
+.cabeca {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 2px solid var(--cor-matriz);
+    padding: 10px 0;
+    padding-bottom: 2px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--cor-secundaria);
+    transition: all 0.4s ease;
+}
+.logotipo {
+    transition: 0.3s;
+    max-width: 100px;
+}
+.logotipo:hover {
+    
+    transform: scale(1.1);
+}
+.contato {
+    background-color: var(--cor-matriz);
+    color: var(--cor-secundaria);
+    padding: 1px;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+.espaco-cabecalho {
+    height: 0;
+}
+
+/* ESTADO DE ROLAGEM */
+
+.cabeca.rolagem {
     position: fixed;
-    z-index: 100;
-    width: 100%;
     top: 0;
     left: 0;
+    width: 100%;
 
-    transition: all 0.5s;
+    background-color: var(--cor-matriz-escura);
+    border-bottom: 2px solid var(--cor-matriz-escura);
 
-}
-nav h1 {
-    color: var(--cor-matriz);
-}
-.cabecalho {
-
-    display: flex;
-    gap: 200px;
-    
-}
-.explorer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.explorer:hover {
-    transition: 0.3s;
-    transform: scale(1.05);
-    font-weight: 600;
-}
-.explorer img {
-        width: 40px;
-    height: 40px;
-    object-fit: contain;
-}
-.espaco {
-    margin-bottom: 150px;
+    padding: 12px 0;
 }
 
+/* ESCONDE A LOGO */
 
-#nometema{
-
-font-family:  "Barlow Condensed";
-
+.cabeca.rolagem .icone {
+    display: none;
 }
 
-/* luca*/
+/* LINKS NO ESTADO DE ROLAGEM */
 
-    .hero{
-
-    height: 80vh;
-    width : 100%;
-    
-
-       
-    background-image: url('../img/LITIO.png');
-        background-size: cover; 
-        background-position: center; 
-margin: 0px;
-padding: 0px;
-
- display: flex;
-    justify-content: center; 
-    align-items: center; 
-
-    animation: troca-fundo 15s infinite;
-    background-color: #0B0F0D;
-    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.402);
-
-    }
-
-    /*é uma tag que da pra fazer animações */
-    /*é dividido em porcentagem dos 15s da animação , só faze regra de 3*/
-@keyframes troca-fundo {
-    0%,33%{ 
-        background-image: url('../img/ImpactoLitio1.jpg'); 
-    }
-    40%,66%{ 
-        background-image: url('../img/LITIO.png'); 
-    }
-    73%,94%{ 
-        background-image: url('../img/ImpactoLitio2.png'); 
-    }
-    100%{ 
-        background-image: url('../img/ImpactoLitio1.jpg'); 
-    }
+.cabeca.rolagem .secao {
+    gap: 60px;
 }
 
-    
-    .hero h1{
-
-        
-        color: white;
-
-        text-align: center;
-
-        font-size: 3rem;
-        
-
-        transition: 0.5s;
-        
-
-    }
-    .hero h1:hover{
-font-size: 5rem;
-text-shadow: 2px 8px 4px rgba(0, 0, 0, 0.8); 
-    }
-
-    nav.nav-encolhido {
-    padding: 10px 40px; 
-    background-color: rgba(11, 15, 13, 0.9); 
-   box-shadow: #e71506(10px,5px);
+.cabeca.rolagem .secao a {
+    color: white;
 }
 
-
+.cabeca.rolagem .secao a:hover {
+    color: var(--cor-secundaria);
+}
 
 /* === 5.1 ... === */ 
 

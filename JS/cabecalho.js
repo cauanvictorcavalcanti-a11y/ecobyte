@@ -1,0 +1,14 @@
+const cabeca = document.querySelector(".cabeca");
+const espaco = document.querySelector(".espaco-cabecalho");
+
+window.addEventListener("scroll", () => {
+
+    if (window.scrollY > 50) {
+        cabeca.classList.add("rolagem");
+        espaco.style.height = cabeca.offsetHeight + "px";
+    } else {
+        cabeca.classList.remove("rolagem");
+        espaco.style.height = "0px";
+    }
+
+}, { passive: true });
