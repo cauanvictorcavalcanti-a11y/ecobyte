@@ -1,6 +1,8 @@
+// SCRIPT que faz a rolagem mudar de sticky para fixed
+
 const cabeca = document.querySelector(".cabeca");
 const espaco = document.querySelector(".espaco-cabecalho");
-
+// a janela percebe o evento scroll e executa a função
 window.addEventListener("scroll", () => {
 
     if (window.scrollY > 50) {
