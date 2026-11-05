@@ -61,6 +61,18 @@ a:hover {
 
 /* === 4. COMPONENTES REUTILIZAVEIS === */ 
 
+.saiba-mais {
+    background-color: var(--cor-matriz);
+    color: var(--cor-secundaria);
+    padding: 15px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+.saiba-mais:hover {
+    background-color: var(--cor-alerta);
+    color: var(--cor-secundaria);
+}
+
 /* === 5. CABECALHO E NAVEGACAO === */ 
 .icone {
     display: flex;
@@ -146,8 +158,6 @@ a:hover {
     color: var(--cor-secundaria);
 }
 
-/* === 5.1 ... === */ 
-
 
 
 /* === 6 FOOTER === */ 
@@ -203,4 +213,52 @@ footer img {
 .saiba-mais a {
     color: white;
     
+}
+/* === 7 HOME === */ 
+
+.container-hero {
+    gap: 16px;
+    margin: 10px;
+    display: grid;
+    grid-template-columns: 500px minmax(0, 1fr);
+    width: 100%;
+}
+.hero {
+    height: 800px;
+    grid-column: 2;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(../img/litio_img/ImpactoLitio1.jpg);
+    background-size: cover;
+    padding: 20px;
+    border-radius: 10px;
+    margin-right: 10px;
+    transition: 0.3s;
+}
+
+.aside-hero {
+    height: 800px;
+    grid-column: 1;
+    background-color: var(--cor-secundaria);
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--cor-matriz);
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.03s;
+    gap: 50px;
+}
+.aside-hero:hover {
+    transform: scale(1.01);
+}
+.whitetext-aside {
+    color: var(--cor-matriz);
+    font-family: var(--font-title);
+}
+.text-aside {
+    color: var(--cor-terciaria);
+    font-family: var(--font-title);
+}
+.botao-aside {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
