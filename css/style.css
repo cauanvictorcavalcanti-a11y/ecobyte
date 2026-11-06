@@ -108,6 +108,7 @@ a:hover {
 .logotipo {
     transition: 0.3s;
     max-width: 80px;
+    cursor:pointer;
 }
 .logotipo:hover {
     
@@ -205,12 +206,12 @@ footer img {
     font-family: var(--font-data);
     font-weight: 100;
 }
-.saiba-mais {
+.credit-mais {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.saiba-mais a {
+.credit-mais a {
     color: white;
     
 }
