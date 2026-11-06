@@ -37,7 +37,7 @@ main {
 
 :root {
     --font-title: 'JetBrains Mono', monospace;
-    --font-body: "Inter", sans-serif;
+    --font-body: 'Geist Sans', 'Inter', sans-serif;
     --font-data: "IBM Plex Mono", monospace;
     --font-source: "Source Sans 3", sans-serif;
 }
@@ -58,8 +58,23 @@ a:hover {
     transform: scale(1.08);
 }
 
+h1, h2, h3, h4, h5, h6 {
+    color: var(--cor-matriz);
+    font-family: var(--font-title);
+}
+p {
+    color: var(--cor-terciaria);
+    font-family: var(--font-body);
+}
+
 
 /* === 4. COMPONENTES REUTILIZAVEIS === */ 
+
+.fontes {
+    padding: 10px;
+    color: var(--cor-matriz-escura);
+    font-family: var(--font-source);
+}
 
 .saiba-mais {
     background-color: var(--cor-matriz);
@@ -72,6 +87,44 @@ a:hover {
     background-color: var(--cor-alerta);
     color: var(--cor-secundaria);
 }
+
+.pergunta-central {
+    font-size: 2rem;
+    font-weight: 500;
+    display: block;
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+.resposta-central {
+    border: 1px solid var(--cor-matriz);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    transition: 0.3s;
+
+    /* sinta a aura */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), 
+                box-shadow 0.3s ease, 
+                filter 0.3s ease;
+}
+.resposta-central:hover {
+    transform: scale(1.05);
+    transform: scale(1.03); 
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); 
+    filter: brightness(1.02); 
+}
+.paragrafo-daresposta {
+    padding: 20px;
+    font-size: 1.2em;
+    font-weight: 200;
+}
+.img-respostacentral {
+    height: 200px;
+    padding: 10px;
+}
+
 
 /* === 5. CABECALHO E NAVEGACAO === */ 
 .icone {
@@ -167,7 +220,7 @@ footer {
     background-color: var(--cor-matriz-escura);
     display: flex;
     flex-direction: row;
-    max-height: 170px;
+    min-height: 170px;
     overflow: hidden;
     width: 100%;
     align-items: center;
@@ -217,6 +270,8 @@ footer img {
 }
 /* === 7 HOME === */ 
 
+
+/* 7.1 HERO + ASIDE */
 .container-hero {
     gap: 16px;
     margin: 10px;
@@ -227,12 +282,42 @@ footer img {
 .hero {
     height: 800px;
     grid-column: 2;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(../img/litio_img/ImpactoLitio1.jpg);
+    background-image:url(../img/litio_img/ImpactoLitio1.jpg);
     background-size: cover;
-    padding: 20px;
     border-radius: 10px;
     margin-right: 10px;
     transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+.plano-defundohero {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: var(--cor-terciaria);
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+
+}
+.convite-artigo {
+    display: block;
+    color: var(--cor-secundaria);
+    font-weight: 500;
+    font-family: var(--font-body);
+    font-size: 2rem;
+}
+.ler-sobre-meioambiente {
+    background-color: var(--cor-matriz);
+    color: var(--cor-secundaria);
+    padding: 15px;
+    border-radius: 10px;
+}
+.ler-sobre-meioambiente:hover {
+    color: var(--cor-secundaria);
+    background-color: var(--cor-alerta);
 }
 
 .aside-hero {
@@ -262,4 +347,69 @@ footer img {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* 7.2 LITIO-HOME */
+
+.litio-home {
+    padding: 70px;
+}
+
+/* 7.3 DESCUBRA */
+
+.descubra-home {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.title-descubrahome {
+    font-size: 2em;
+    transition: 0.3s;
+}
+.title-descubrahome:hover {
+    transform: scale(1.03);
+}
+.container-cards-home {
+    border: 1px solid var(--cor-matriz);
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+.card-home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(var(--cor-matriz-escura), var(--cor-matriz));
+    gap: 10px;
+    overflow: hidden;
+    min-height: 300px;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: var(--cor-matriz-escura);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s ease;
+}
+.card-home p {
+    color: var(--cor-secundaria);
+    font-family: var(--font-title);
+}
+.card-home:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+.textocard-home {
+    color: var(--cor-secundaria);
+    font-family: var(--font-title);
+    font-size: 1.5em;
+}
+.end-home {
+    display: flex;
+    margin-top: auto; 
 }
