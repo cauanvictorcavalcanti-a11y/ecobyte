@@ -460,7 +460,7 @@ footer img {
         display: none;
     }
     .container-cards-home {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(1, minmax(0, 1fr));
     gap: 12px;
     padding: 12px;
     }
@@ -484,6 +484,9 @@ footer img {
     }
     .secao-footer {
         display: none;
+    }
+    .contato {
+        font-size: 0.6em;
     }
 
 }
