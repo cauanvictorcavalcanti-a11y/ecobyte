@@ -413,3 +413,77 @@ footer img {
     display: flex;
     margin-top: auto; 
 }
+
+/* 8 ARTIGOS */
+
+
+/* MELHORIA E SUPORTE MOBILE */
+@media (max-width: 768px) {
+    .logotipo {
+        display: none;
+    }
+    .cabeca .secao {
+        gap: 10px;
+    }
+    .cabeca .secao a {
+        font-size: 0.9em;
+    }
+
+    .cabeca.rolagem .secao {
+        gap: 30px
+    }
+    .cabeca.rolagem .secao a {
+        font-size: 0.7em;
+    }
+    .container-hero {
+        display: flex;
+        flex-direction: column;
+    }
+    .aside-hero {
+        grid-column: 1;
+        height: auto;
+    }
+    .pergunta-central {
+        padding-left: 1px;
+        padding-bottom: 20px;
+        font-size: 1.5rem;
+    }
+    .litio-home {
+        padding: 20px;
+    }
+    .paragrafo-daresposta {
+        padding: 20px;
+        font-size: 1.2em;
+        font-weight: 200;
+    }
+    .img-respostacentral {
+        display: none;
+    }
+    .container-cards-home {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    padding: 12px;
+    }
+
+    .card-home {
+        min-height: 250px;
+    }
+
+    .textocard-home {
+        font-size: 1.2em;
+    }
+    footer {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        min-height: auto;
+    }
+    .barra {
+        display: none;
+    }
+    .secao-footer {
+        display: none;
+    }
+
+}
