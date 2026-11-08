@@ -8,8 +8,9 @@ Grupo: [
         Enzo Oliveira Ricci
         Ruan Ribeiro Prospero
         Enzo Novais Silva
+        Lucas Antonio Souza Carneiro
 ] 
-Data: [27/06/2026] 
+Data: [08/11/2026] 
 =================================================== */ 
 
 /* === 1. VARIAVEIS GLOBAIS (TOKENS DE DESIGN) === */ 
@@ -24,6 +25,14 @@ Data: [27/06/2026]
         --cor-linkefonte: #59665E;
         --cor-alerta: #d99611;
 }
+:root.escuro {
+    --cor-matriz: #66b56b;
+    --cor-matriz-escura: #176B45; 
+    --cor-secundaria: #0B0F0D;
+    --cor-terciaria: #FFFFFF;
+    --cor-linkefonte: #59665E;
+    --cor-alerta: #d99611;
+}
 /* === 2. RESET E BASE === */ 
 
 * {box-sizing: border-box;}
@@ -31,6 +40,10 @@ html { font-size: 1rem; }
 
 main {
     min-height: 1500px;
+}
+body {
+    background-color: var(--cor-secundaria);
+    transition: background-color 0.3s ease;
 }
 
 /* === 3. TIPOGRAFIA === */ 
@@ -420,7 +433,7 @@ footer img {
 /* MELHORIA E SUPORTE MOBILE */
 @media (max-width: 768px) {
     .logotipo {
-        display: none;
+        width: 60px;
     }
     .cabeca .secao {
         gap: 10px;
@@ -430,7 +443,7 @@ footer img {
     }
 
     .cabeca.rolagem .secao {
-        gap: 30px
+        gap: 12px
     }
     .cabeca.rolagem .secao a {
         font-size: 0.7em;

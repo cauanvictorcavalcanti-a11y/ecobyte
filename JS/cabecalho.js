@@ -14,3 +14,9 @@ window.addEventListener("scroll", () => {
     }
 
 }, { passive: true });
+
+const logo = document.querySelector('.logotipo');
+// ao clicar no logo, alterna entre o modo escuro e claro
+logo.addEventListener('click', () => {
+    document.documentElement.classList.toggle('escuro');
+});
