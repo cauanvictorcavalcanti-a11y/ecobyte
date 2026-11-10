@@ -79,6 +79,24 @@ p {
     color: var(--cor-terciaria);
     font-family: var(--font-body);
 }
+blockquote {
+    color: var(--cor-linkefonte);
+    font-family: var(--font-data);
+    font-size: 1.2rem;
+    font-weight: 200;
+}
+.titulo-quemsomos {
+    font-family: var(--font-title);
+    color: var(--cor-matriz);
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+.texto-quemsomos {
+    font-family: var(--font-source);
+    color: var(--cor-terciaria);
+    font-size: 1.2rem;
+    font-weight: 200;
+}
 
 
 /* === 4. COMPONENTES REUTILIZAVEIS === */ 
@@ -570,111 +588,99 @@ footer img {
 
 /* 8.2 EQUIPE */
 
-.titulo-da-selecao {
-    font-size: 2rem;
-    font-weight: 600;
-    color: var(--cor-matriz);
-    padding-left: 20px;
-}
-.equipe {
+.quemsomos {
+    padding: 40px;
     display: flex;
     flex-direction: column;
     gap: 20px;
-    padding: 20px;
-    justify-content: center;
-    align-items: center;
 }
-.row-equipe {
+.grid-devs {
     display: grid;
-    grid-template-columns: 300px minmax(0, 1fr);
-    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 6fr));
+    gap: 20px;
 }
-.perfil {
-    min-height: 500px;
+.dev-card {
     display: flex;
     flex-direction: column;
-    border: 1px solid var(--cor-matriz);
-    border-radius: 10px;
     align-items: center;
-    transition: 0.3s;
-}
-.perfil:hover {
-    transform: scale(1.03);
-    border-color: var(--cor-matriz-escura);
-}
-.perfil-desc button {
-    text-decoration: none;
-    background: transparent;
-    border: none;
-    box-shadow: none;
-    font-weight: 600;
-    font-size: 1.5em;
-    transition: 0.5s;
-    color: var(--cor-matriz);
-}
-.perfil-desc button:hover {
-    color: var(--cor-matriz-escura);
-    cursor: pointer;
-    transform: scale(1.05);
-}
-.botao-sobre {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 25px;
-}
-.espaco-perfil {
-    display: flex;
-    overflow: hidden;
-    flex-direction: column;
     gap: 10px;
-    padding: 10px;
-    border-radius: 10px;
     border: 1px solid var(--cor-matriz);
-    border-top: 0px;
-    margin: 10px;
-    background-image: url(../img/favicon_io/android-chrome-512x512.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    object-fit: cover;
-    transition: border-color 0.3s ease,
-                box-shadow 0.3s ease, 0.3s;
-
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
-.espaco-perfil:hover {
-    border: 1px solid var(--cor-matriz-escura);
-    border-top: 0px;
+.dev-card:hover {
+    transform: scale(1.03);
     box-shadow: 0 4px 15px rgba(102, 181, 107, 0.12);
-    transform: scale(1.01);
 }
-.espaco-perfil h3 {
-    font-size: 1.5rem;
-    color: var(--cor-matriz);
-}
-.foto-sobre {
-    margin-top: 20px;
+.dev-foto {
     width: 150px;
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
-    border: 1px solid var(--cor-matriz);
 }
-.nome-user {
-    font-size: 1.2rem;
-    color: var(--cor-secundaria);
+.dev-nome {
     font-family: var(--font-title);
-    font-weight: 600;
-    background-color: var(--cor-matriz);
-    padding: 5px;
-    border-radius: 5px;
-    transition: 0.3s;
+    color: var(--cor-matriz);
+    font-size: 1.2rem;
 }
-.nome-user:hover {
-    background-color: var(--cor-alerta);
-    cursor: pointer;
-    transform: scale(1.05);
+.dev-descricao {
+    font-family: var(--font-source);
+    color: var(--cor-linkefonte);
+    text-align: center;
+    font-size: 1rem;
 }
+.titulo-missao {
+    font-family: var(--font-title);
+    color: var(--cor-matriz);
+    font-size: 2rem;
+    font-weight: 500;
+    padding-left: 30px;
+}
+.texto-missao {
+    font-family: var(--font-source);
+    color: var(--cor-linkefonte);
+    text-align: center;
+    font-size: 1rem;
+    border-left: 1px solid var(--cor-matriz);
+    text-align: left;
+    padding-left: 10px;
+    font-size: 1.2rem;
+}
+.titulo-video {
+    font-family: var(--font-title);
+    color: var(--cor-matriz);
+    font-size: 2rem;
+    font-weight: 500;
+    padding-left: 30px;
+}
+.video-sobre {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.resposta-video {
+    font-family: var(--font-source);
+    color: var(--cor-linkefonte);
+    text-align: center;
+    font-size: 1rem;
+    padding-top: 10px;
+}
+.lema-ecobyte {
+    font-family: var(--font-title);
+    color: var(--cor-matriz);
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding-left: 30px;
+}
+.video-apresentacao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 
 /* MELHORIA E SUPORTE MOBILE */
 @media (max-width: 768px) {
@@ -764,9 +770,5 @@ footer img {
 
     .resposta-sobre {
         padding: 0 18px 18px;
-    }
-
-    .equipe {
-        display: none;
     }
 }
