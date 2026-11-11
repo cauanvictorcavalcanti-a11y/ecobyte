@@ -722,12 +722,6 @@ footer img {
     border-radius: 10px;
 
 }
-.dados p {
-    color: white;
-}
-.dados h1,h2,h3,h4,h5,h6 {
-    color: white;
-}
 
 /* MELHORIA E SUPORTE MOBILE */
 @media (max-width: 768px) {
