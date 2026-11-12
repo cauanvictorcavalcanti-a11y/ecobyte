@@ -14,6 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
     <!-- JS -->
     <script src="JS/cabecalho.js" defer></script>
+    <script src="JS/artigo.js" defer></script>
 </head>
 <body>
     <!-- TAGS SEMANTICAS -->
@@ -36,7 +37,48 @@
     </header>
     <div class="espaco-cabecalho"></div>
     <main>
-        
+        <section class="artigos-intro">
+            <span class="etiqueta-faq">[ARTIGOS E FONTES DA PESQUISA]</span>
+    <h1>FONTES E ARTIGOS</h1>
+    <p>
+        Aqui reunimos tudo o que usamos para construir o Ecobyte: reportagens,
+        documentos, vídeos, imagens e sites de checagem. Cada caixinha leva direto à fonte original,
+        para você conferir por conta própria, porque desconfiar também é aprender.
+    </p>
+    <p>
+        <strong>O que você encontra aqui:</strong> use a busca para procurar pelo nome,
+        ou os filtros para ver só um tipo de material.
+    </p>
+</section>
+
+<section class="artigos-lista">
+
+    <div class="artigos-barra">
+        <input
+            type="search"
+            id="busca-artigos"
+            placeholder="Pesquisar pelo nome do artigo..."
+            aria-label="Pesquisar artigos">
+
+        <div class="artigos-filtros" id="filtros-artigos">
+            <button class="filtro ativo" data-tipo="todos">Todos</button>
+            <button class="filtro" data-tipo="site">Sites</button>
+            <button class="filtro" data-tipo="documento">Documentos</button>
+            <button class="filtro" data-tipo="video">Vídeos</button>
+            <button class="filtro" data-tipo="imagem">Imagens</button>
+            <button class="filtro" data-tipo="noticia">Notícias</button>
+        </div>
+    </div>
+
+    <p class="artigos-contagem" id="contagem-artigos" aria-live="polite"></p>
+
+    <div class="grid-artigos" id="grid-artigos"></div>
+
+    <p class="artigos-vazio" id="vazio-artigos" hidden>
+        Nenhuma fonte encontrada. Tente outro termo ou filtro.
+    </p>
+
+</section>
     </main>
 
     <footer>

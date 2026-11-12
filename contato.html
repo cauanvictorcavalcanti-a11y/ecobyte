@@ -14,6 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
     <!-- JS -->
     <script src="JS/cabecalho.js" defer></script>
+    <script src="JS/contato.js" defer></script>
 </head>
 <body>
     <!-- TAGS SEMANTICAS -->
@@ -36,7 +37,113 @@
     </header>
     <div class="espaco-cabecalho"></div>
     <main>
-        
+        <section id="contato" class="contato-secao">
+
+    <h2>Entre em Contato</h2>
+
+    <div class="aviso-ficticio">
+        <strong>ATENÇÃO:</strong> Estes dados são fictícios criados para fins acadêmicos.
+    </div>
+
+    <div class="contato-layout">
+
+        <div class="informacoes">
+
+            <h3>Informações de Contato</h3>
+
+            <address>
+                <strong>PENTEFINO&copy; - Controlado pelo Instituto Verdade Digital</strong><br>
+                Rua Nelson Jr, 67<br>
+                Bairro Xerxes<br>
+                Itapipoca - CE<br>
+                CEP: 16711-424<br><br>
+
+                Telefone: (13) 96969-4261<br>
+                E-mail: contato@verdadedigital.org.br
+            </address>
+
+            <h3>Horário de Atendimento</h3>
+
+            <dl>
+                <dt>Segunda a Sexta</dt>
+                <dd>08h00 às 18h00</dd>
+
+                <dt>Sábado</dt>
+                <dd>09h00 às 13h00</dd>
+
+                <dt>Domingo</dt>
+                <dd>Fechado</dd>
+            </dl>
+
+            <h3>Localização de Referência</h3>
+
+            <iframe
+                title="Mapa de referência"
+                src="https://www.google.com/maps?q=IFSP+Cubatão&output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+
+        </div>
+
+        <form class="formulario-contato" id="form-contato" novalidate>
+
+            <h3>Envie sua Mensagem</h3>
+
+            <label for="nome">Nome Completo</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+
+            <label for="telefone">Telefone</label>
+            <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" maxlength="15">
+
+            <label for="nascimento">Data de Nascimento</label>
+            <input type="date" id="nascimento" name="nascimento" min="1900-01-01">
+
+            <label for="assunto">Assunto</label>
+            <select id="assunto" name="assunto" required>
+                <option value="">Selecione uma opção</option>
+                <option>Denúncia</option>
+                <option>Voluntariado</option>
+                <option>Parceria</option>
+                <option>Imprensa</option>
+                <option>Outro</option>
+            </select>
+
+            <fieldset>
+                <legend>Como conheceu o site?</legend>
+
+                <label class="opcao">
+                    <input type="radio" name="origem" value="google"> Google
+                </label>
+                <label class="opcao">
+                    <input type="radio" name="origem" value="redes"> Redes Sociais
+                </label>
+                <label class="opcao">
+                    <input type="radio" name="origem" value="escola"> Escola
+                </label>
+            </fieldset>
+
+            <label class="opcao">
+                <input type="checkbox" name="newsletter">
+                Desejo receber newsletters e atualizações.
+            </label>
+
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" rows="6" maxlength="500" placeholder="Digite sua mensagem aqui" required></textarea>
+            <small class="contador" id="contador">0 / 500</small>
+
+            <button type="submit">Enviar Mensagem</button>
+
+            <p class="status-form" id="status-form" role="status" aria-live="polite"></p>
+
+        </form>
+
+    </div>
+
+</section>
     </main>
 
     <footer>
