@@ -38,17 +38,123 @@
 
     <main>
         <!-- INTRODUÇÃO-->
+        <section class="intro">
+            <span class="etiqueta-faq">[DADOS DA PESQUISA]</span>
+    <h1>DADOS RELACIONADOS A PESQUISA</h1>
+    <p>
+        Aqui reunimos todos os dados mais importantes referentes a informações pesquisadas pela nossa equipe, todos os dados apresentados tem dedo do nosso time!
+    </p>
+</section>
+<section class="dados-tabelas">
 
-        <section class="introducao_dados">
-            <span class="etiqueta-faq">[CENTRAL DE DADOS]</span>
-            <h1>O QUE DEVE SER APRESENTADO NA PÁGINA?</h1>
+    <!-- TABELA 1: RESERVAS -->
+    <div class="tabela-card">
+        <h3 id="titulo-reservas">Quem tem as maiores reservas de lítio</h3>
+        <div class="tabela-rolagem">
+            <table aria-labelledby="titulo-reservas">
+                <thead>
+                    <tr>
+                        <th scope="col">País</th>
+                        <th scope="col" class="num">Reservas (milhões de t)</th>
+                        <th scope="col" class="num">% do mundo</th>
+                        <th scope="col" class="num">Extraiu em 2025 (mil t)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><th scope="row">Chile</th><td class="num">9,2</td><td class="num">24,9%</td><td class="num">56</td></tr>
+                    <tr><th scope="row">Austrália</th><td class="num">8,4</td><td class="num">22,7%</td><td class="num">92</td></tr>
+                    <tr><th scope="row">China</th><td class="num">4,6</td><td class="num">12,4%</td><td class="num">62</td></tr>
+                    <tr><th scope="row">Estados Unidos</th><td class="num">4,4</td><td class="num">11,9%</td><td class="num">n/d</td></tr>
+                    <tr><th scope="row">Argentina</th><td class="num">4,4</td><td class="num">11,9%</td><td class="num">23</td></tr>
+                    <tr><th scope="row">Canadá</th><td class="num">1,6</td><td class="num">4,3%</td><td class="num">n/d</td></tr>
+                    <tr><th scope="row">Brasil</th><td class="num">0,54</td><td class="num">1,5%</td><td class="num">n/d</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <p class="tabela-fonte">
+            Reservas em lítio contido; total mundial de 37 milhões de t. Os percentuais foram calculados sobre esse total. n/d = não divulgado ou não confirmado.
+            Fonte: <a href="https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-lithium.pdf" target="_blank" rel="noopener noreferrer">USGS, Mineral Commodity Summaries 2026</a>.
+        </p>
+    </div>
 
-            <ol type="I">
-                <li>Apresentar o número de países que tem maior concentração do material o Lítio </li>
-                <li></li>
-                <li></li>
-            </ol>
-        </section>
+    <!-- TABELA 2: QUEM FICA COM A PARTE MAIS VALIOSA -->
+    <div class="tabela-card">
+        <h3 id="titulo-lucro">Quem fica com a parte mais valiosa da cadeia</h3>
+        <div class="tabela-rolagem">
+            <table aria-labelledby="titulo-lucro">
+                <thead>
+                    <tr>
+                        <th scope="col">País</th>
+                        <th scope="col">Onde domina</th>
+                        <th scope="col">Dado</th>
+                        <th scope="col">Fonte</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">China</th>
+                        <td>Refino do lítio</td>
+                        <td>Cerca de 60% ou mais do lítio refinado no mundo (2023)</td>
+                        <td><a href="https://daxueconsulting.com/chinese-battery-market-goes-global/" target="_blank" rel="noopener noreferrer">IEA, via Daxue</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">China</th>
+                        <td>Fabricação de baterias</td>
+                        <td>Mais de 80% das baterias de íon-lítio (2025)</td>
+                        <td><a href="https://iea.org/commentaries/global-battery-markets-are-growing-strongly-and-so-are-the-supply-risks" target="_blank" rel="noopener noreferrer">IEA</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Coreia do Sul e Japão</th>
+                        <td>Fabricação de baterias</td>
+                        <td>Empresas de China, Coreia e Japão somam cerca de 99% das células (2025)</td>
+                        <td><a href="https://www.batteriesinternational.com/?p=25095" target="_blank" rel="noopener noreferrer">IEA, via Batteries Intl.</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Austrália</th>
+                        <td>Extração em rocha</td>
+                        <td>92 mil t em 2025, a maior produção do mundo</td>
+                        <td><a href="https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-lithium.pdf" target="_blank" rel="noopener noreferrer">USGS 2026</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Chile</th>
+                        <td>Extração em salmoura</td>
+                        <td>56 mil t em 2025, a 3ª maior produção</td>
+                        <td><a href="https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-lithium.pdf" target="_blank" rel="noopener noreferrer">USGS 2026</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p class="tabela-fonte">
+            Não existe um ranking de "lucro por país" mas aqui representa quem fica com a verba
+        </p>
+    </div>
+
+</section>
+
+<!-- MODELO DE CONTAINER: copie o <article> inteiro para cada dado -->
+<article class="dado-bloco">
+
+    <div class="dado-texto">
+        <span class="dado-categoria">BRASIL</span>
+        <span class="dado-numero">+83,6%</span>
+        <h3 class="dado-titulo">Produção de lítio no Brasil em 2023</h3>
+        <p class="dado-descricao">
+            A produção nacional de lítio cresceu 83,6% em 2023, puxada pela entrada de novas mineradoras em Minas Gerais.
+            Até então, no Vale do Jequitinhonha, só a Companhia Brasileira de Lítio fazia a lavra. Esse crescimento rápido é o pano de fundo das queixas de moradores sobre poeira e barulho na região.
+        </p>
+        <p class="dado-fonte">
+            Fonte:
+            <a href="https://www.brasildefato.com.br/2025/10/05/vale-do-litio-exploracao-de-metais-criticos-impacta-comunidades-em-mg/" target="_blank" rel="noopener noreferrer">ANM (Sumário Mineral 2024), via Agência Brasil</a>
+        </p>
+    </div>
+
+    <figure class="dado-imagem">
+        <img src="img/dados/vale_do_jeti.webp" alt="Reserva de Lítio no Vale do Jequitinhonha">
+        <!-- Quando a imagem chegar, apague a div acima e use:
+             <img src="img/dados/producao-brasil.jpg" alt="Descreva o que a imagem mostra"> -->
+    </figure>
+
+</article>
     </main>
 
     <footer>

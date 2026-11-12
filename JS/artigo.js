@@ -62,12 +62,54 @@
         fonte: 'Dialogue Earth',
         link: 'https://dialogue.earth/pt-br/industrias-extrativistas-pt-br/58865-can-lithium-be-produced-with-lower-environmental-impact-latin-america/'
     },
+        {
+        titulo: 'Mineral Commodity Summaries 2026: Lithium',
+        tipo: 'documento',
+        descricao: 'Resumo anual do serviço geológico dos EUA com reservas e produção de lítio por país. É a base da tabela de reservas do site (em inglês).',
+        fonte: 'USGS, 2026',
+        link: 'https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-lithium.pdf'
+    },
+    {
+        titulo: 'Global Critical Minerals Outlook 2026',
+        tipo: 'documento',
+        descricao: 'Relatório anual da Agência Internacional de Energia sobre oferta, demanda e concentração do refino de minerais como o lítio (em inglês).',
+        fonte: 'IEA, 2026',
+        link: 'https://www.iea.org/reports/global-critical-minerals-outlook-2026'
+    },
+    {
+        titulo: 'Global battery markets are growing strongly, and so are the supply risks',
+        tipo: 'documento',
+        descricao: 'Comentário da IEA sobre o mercado de baterias de íon-lítio, que passou de US$ 150 bilhões em 2025, e os riscos da fabricação concentrada na China (em inglês).',
+        fonte: 'IEA',
+        link: 'https://iea.org/commentaries/global-battery-markets-are-growing-strongly-and-so-are-the-supply-risks'
+    },
+    {
+        titulo: 'IEA report counts global cost of China\'s battery dominance',
+        tipo: 'noticia',
+        descricao: 'Reportagem sobre relatório da IEA: a China concentra de 60% a 100% de cada etapa da fabricação de baterias, e empresas chinesas, coreanas e japonesas somam 99% das células (em inglês).',
+        fonte: 'Batteries International, 2026',
+        link: 'https://www.batteriesinternational.com/?p=25095'
+    },
+    {
+        titulo: 'Chinese battery market: the road to global energy leadership',
+        tipo: 'noticia',
+        descricao: 'Análise de consultoria sobre como a China integra desde o refino das matérias-primas até a fabricação das baterias (em inglês).',
+        fonte: 'Daxue Consulting',
+        link: 'https://daxueconsulting.com/chinese-battery-market-goes-global/'
+    },
     {
         titulo: 'Chile quer impulsionar lítio, mas desafios ambientais persistem',
         tipo: 'noticia',
         descricao: 'O Chile planeja explorar novas salinas, enquanto comunidades e especialistas questionam o impacto sobre a água.',
         fonte: 'Dialogue Earth',
         link: 'https://dialogue.earth/pt-br/negocios/chile-litio-estrategia-desafios-ambientais/'
+    },
+    {
+        titulo: 'Explore updated data on metals and minerals',
+        tipo: 'imagem',
+        descricao: 'No gráfico, você pode ver a participação na produção global de lítio mineral pelos seis maiores produtores em 2024.',
+        fonte: 'world in data',
+        link: './img/dados/Tabela_Litio_producao.png'
     },
     {
         titulo: 'Developing countries pay environmental cost of electric car batteries',

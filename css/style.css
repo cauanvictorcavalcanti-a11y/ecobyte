@@ -1,7 +1,7 @@
 
 
 /* =================================================== 
-STYLE.CSS — [PenteFino] — [Fake News & Desinformação] 
+STYLE.CSS — [Ecobyte] — [Exploração do Lithium] 
 Grupo: [
         Cauan Victor Andrade Cavalcanti
         Miguel Godke Silva
@@ -163,7 +163,23 @@ li {
     height: 200px;
     padding: 10px;
 }
-
+.intro {
+    margin-top: 20px;
+    padding: 40px 40px 10px;
+    border: 1px solid var(--cor-matriz);
+    border-radius: 12px;
+}
+.intro h1 {
+    font-family: var(--font-title);
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+.intro p {
+    font-family: var(--font-source);
+    font-size: 1.2rem;
+    line-height: 1.7;
+    max-width: 900px;
+}
 
 /* === 5. CABECALHO E NAVEGACAO === */ 
 .icone {
@@ -691,36 +707,189 @@ footer img {
 
 /* 9 DADOS */
 
-.introducao_dados {
-    margin-top: 10px;
-    border: 1px solid var(--cor-matriz);
-    border-radius: 10px;
-    border-top: 0px;
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    transition: 0.3s;
-}
-.introducao_dados:hover {
-    border-color: var(--cor-matriz-escura);
-    box-shadow: 0 4px 15px rgba(102, 181, 107, 0.12);
-    transform: scale(1.001);    
-}
+/* === 13 DADOS: TABELAS E CONTAINERS === */
 
-.container-dados {
+/* TABELAS */
+
+.dados-tabelas {
     display: grid;
-    padding: 10px;
-    margin: 10px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+    align-items: start;
+    padding: 40px;
 }
-.dados {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--cor-matriz);
-    background-image: linear-gradient(var(--cor-matriz-escura), var(--cor-matriz));
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
 
+.tabela-card {
+    min-width: 0;
+    padding: 20px;
+    border: 1px solid var(--cor-matriz);
+    border-radius: 12px;
+    background-color: var(--cor-secundaria);
+}
+
+.tabela-card h3 {
+    margin: 0 0 15px;
+    font-size: 1.3rem;
+}
+
+.tabela-rolagem {
+    overflow-x: auto;
+}
+
+.tabela-card table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--font-source);
+    font-size: 1rem;
+}
+
+.tabela-card th,
+.tabela-card td {
+    padding: 10px 12px;
+    text-align: left;
+    vertical-align: top;
+    color: var(--cor-terciaria);
+    border-bottom: 1px solid rgba(102, 181, 107, 0.25);
+}
+
+.tabela-card thead th {
+    background-color: var(--cor-matriz-escura);
+    color: #fff;
+    font-family: var(--font-title);
+    font-size: 0.85rem;
+    font-weight: 600;
+    border-bottom: none;
+}
+
+.tabela-card tbody th {
+    font-weight: 600;
+}
+
+.tabela-card tbody tr:nth-child(even) {
+    background-color: rgba(102, 181, 107, 0.1);
+}
+
+.tabela-card .num {
+    text-align: right;
+    font-family: var(--font-data);
+    white-space: nowrap;
+}
+
+.tabela-fonte {
+    margin: 12px 0 0;
+    font-family: var(--font-source);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--cor-linkefonte);
+}
+
+.tabela-fonte a:hover,
+.tabela-card td a:hover {
+    transform: none;
+    font-weight: inherit;
+}
+
+/* CONTAINER DE CADA DADO */
+
+.dado-bloco {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 40px;
+    align-items: center;
+    min-height: 80vh;
+    padding: 40px;
+    border-top: 1px solid rgba(102, 181, 107, 0.25);
+}
+
+.dado-bloco.inverso .dado-imagem {
+    order: -1;
+}
+
+.dado-texto {
+    min-width: 0;
+}
+
+.dado-categoria {
+    font-family: var(--font-data);
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    color: var(--cor-matriz);
+}
+
+.dado-numero {
+    display: block;
+    margin: 6px 0 10px;
+    font-family: var(--font-title);
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 500;
+    line-height: 1;
+    color: var(--cor-matriz);
+}
+
+.dado-titulo {
+    margin: 0 0 12px;
+    font-size: 1.6rem;
+}
+
+.dado-descricao {
+    margin: 0 0 15px;
+    font-family: var(--font-source);
+    font-size: 1.2rem;
+    line-height: 1.7;
+}
+
+.dado-fonte {
+    margin: 0;
+    font-family: var(--font-data);
+    font-size: 0.9rem;
+    color: var(--cor-linkefonte);
+}
+
+.dado-imagem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    margin: 0;
+    aspect-ratio: 4 / 3;
+    border: 1px solid var(--cor-matriz);
+    border-radius: 12px;
+    background-color: var(--cor-secundaria);
+    overflow: hidden;
+}
+
+.dado-imagem img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.dado-espaco {
+    padding: 20px;
+    text-align: center;
+    font-family: var(--font-data);
+    color: var(--cor-linkefonte);
+}
+
+/* CELULAR / TABLET */
+
+@media (max-width: 900px) {
+    .dados-tabelas {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .dado-bloco {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        min-height: auto;
+        padding: 30px 20px;
+    }
+
+    .dado-bloco.inverso .dado-imagem {
+        order: 0;
+    }
 }
 
 /* === 10 CONTATO === */
@@ -906,25 +1075,6 @@ footer img {
     font-size: 1.5rem;
     font-weight: 500;
     padding-left: 30px;
-}
-
-.artigos-intro {
-    margin-top: 20px;
-    padding: 40px 40px 10px;
-    border: 1px solid var(--cor-matriz);
-    border-radius: 12px;
-}
-.artigos-intro h1 {
-    font-family: var(--font-title);
-    font-size: 2rem;
-    margin-bottom: 10px;
-}
-
-.artigos-intro p {
-    font-family: var(--font-source);
-    font-size: 1.2rem;
-    line-height: 1.7;
-    max-width: 900px;
 }
 
 .artigos-lista {
