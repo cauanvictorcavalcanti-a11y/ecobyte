@@ -105,7 +105,65 @@ li {
     font-family: var(--font-body);
     font-weight: 600;
 }
+/* TABELAS */
 
+.dados-tabelas {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+    align-items: start;
+    padding: 40px;
+}
+
+.tabela-card {
+    min-width: 0;
+    padding: 20px;
+    border: 1px solid var(--cor-matriz);
+    border-radius: 12px;
+    background-color: var(--cor-secundaria);
+}
+
+.tabela-card h3 {
+    margin: 0 0 15px;
+    font-size: 1.3rem;
+}
+
+.tabela-rolagem {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--font-source);
+    font-size: 1rem;
+}
+
+th,
+td {
+    padding: 10px 12px;
+    text-align: left;
+    vertical-align: top;
+    color: var(--cor-terciaria);
+    border-bottom: 1px solid rgba(102, 181, 107, 0.25);
+}
+
+thead th {
+    background-color: var(--cor-matriz-escura);
+    color: #fff;
+    font-family: var(--font-title);
+    font-size: 0.85rem;
+    font-weight: 600;
+    border-bottom: none;
+}
+
+tbody th {
+    font-weight: 600;
+}
+
+tbody tr:nth-child(even) {
+    background-color: rgba(102, 181, 107, 0.1);
+}
 
 /* === 4. COMPONENTES REUTILIZAVEIS === */ 
 
@@ -707,68 +765,6 @@ footer img {
 
 /* 9 DADOS */
 
-/* === 13 DADOS: TABELAS E CONTAINERS === */
-
-/* TABELAS */
-
-.dados-tabelas {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 30px;
-    align-items: start;
-    padding: 40px;
-}
-
-.tabela-card {
-    min-width: 0;
-    padding: 20px;
-    border: 1px solid var(--cor-matriz);
-    border-radius: 12px;
-    background-color: var(--cor-secundaria);
-}
-
-.tabela-card h3 {
-    margin: 0 0 15px;
-    font-size: 1.3rem;
-}
-
-.tabela-rolagem {
-    overflow-x: auto;
-}
-
-.tabela-card table {
-    width: 100%;
-    border-collapse: collapse;
-    font-family: var(--font-source);
-    font-size: 1rem;
-}
-
-.tabela-card th,
-.tabela-card td {
-    padding: 10px 12px;
-    text-align: left;
-    vertical-align: top;
-    color: var(--cor-terciaria);
-    border-bottom: 1px solid rgba(102, 181, 107, 0.25);
-}
-
-.tabela-card thead th {
-    background-color: var(--cor-matriz-escura);
-    color: #fff;
-    font-family: var(--font-title);
-    font-size: 0.85rem;
-    font-weight: 600;
-    border-bottom: none;
-}
-
-.tabela-card tbody th {
-    font-weight: 600;
-}
-
-.tabela-card tbody tr:nth-child(even) {
-    background-color: rgba(102, 181, 107, 0.1);
-}
-
 .tabela-card .num {
     text-align: right;
     font-family: var(--font-data);
@@ -872,24 +868,39 @@ footer img {
     color: var(--cor-linkefonte);
 }
 
-/* CELULAR / TABLET */
+.saiba-dados {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    border: 1px solid var(--cor-matriz);
+    border-radius: 10px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+.saiba-dados:hover {
+    border: 1px solid var(--cor-matriz-escura);
+}
+.saiba-dados h5 {
+    font-size: 1.6em;
+}
 
-@media (max-width: 900px) {
-    .dados-tabelas {
-        grid-template-columns: 1fr;
-        padding: 20px;
-    }
-
-    .dado-bloco {
-        grid-template-columns: 1fr;
-        gap: 25px;
-        min-height: auto;
-        padding: 30px 20px;
-    }
-
-    .dado-bloco.inverso .dado-imagem {
-        order: 0;
-    }
+.descubra-dados {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container-cards-dados {
+    border: 1px solid var(--cor-matriz);
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 30px;
 }
 
 /* === 10 CONTATO === */
@@ -1212,7 +1223,7 @@ footer img {
 /* === 12 PESQUISA === */
 
 html { scroll-behavior: smooth; }
-
+/*precisa disso pro sumario nao explodir a tela */
 @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
 }
@@ -1559,5 +1570,26 @@ html { scroll-behavior: smooth; }
 
     .resposta-sobre {
         padding: 0 18px 18px;
+    }
+    .container-cards-dados {
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media (max-width: 900px) {
+    .dados-tabelas {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .dado-bloco {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        min-height: auto;
+        padding: 30px 20px;
+    }
+
+    .dado-bloco.inverso .dado-imagem {
+        order: 0;
     }
 }

@@ -208,6 +208,20 @@
         descricao: 'Revista de divulgação científica que traduz estudos acadêmicos brasileiros para o público geral.',
         fonte: 'revistapesquisa.fapesp.br',
         link: 'https://revistapesquisa.fapesp.br'
+    },
+    {
+        titulo: 'Recurso Natural de lítio',
+        tipo: 'site',
+        descricao: 'Vivemos tempos de mudança acelerada que afectam de forma indelével [...] modelos de desenvolvimento sócio-económico e respectivas interaçções com os Sistemas Naturais',
+        fonte: 'Casa da Ciência: Recurso Natural de lítio',
+        link: 'https://rce.casadasciencias.org/rceapp/art/2020/034/'
+    },
+    {
+        titulo: 'Lítio no Brasil: quem pediu, onde e em que fase',
+        tipo: 'site',
+        descricao: 'Mapa, estados, municípios, empresas e fases dos processos de lítio na Agência Nacional de Mineração, com os dados abertos do SIGMINE.',
+        fonte: 'Mineração.org',
+        link: 'https://mineracao.org/dados/litio-no-brasil/'
     }
 ];
     // ========================================
