@@ -1593,3 +1593,66 @@ html { scroll-behavior: smooth; }
         order: 0;
     }
 }
+
+/*qr-code*/
+
+.fundo_qr {
+    border: 1px solid var(--cor-matriz);
+    border-radius: 10px;
+    display: grid;
+    
+    gap: 20px;
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 30px;
+
+    max-width: 100%;
+box-sizing: border-box;
+}
+
+.card_qr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(var(--cor-matriz-escura), var(--cor-matriz));
+    gap: 10px;
+    overflow: visible;
+    min-height: 300px;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: var(--cor-matriz-escura);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s ease;
+}
+
+.bg_qr{
+  background-color: #135a3a;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    width: fit-content;
+    max-width: 100%;
+    padding: 30px;
+    gap: 10px;
+
+
+}
+
+
+.desc_qr{
+
+    color: white;
+    font-weight: 600;
+}
+
+.foto_qr{
+   width: 100%;
+    max-width: 300px;
+    height: auto;
+
+
+
+}
+
+.justificado_p{ text-align: justify;}
