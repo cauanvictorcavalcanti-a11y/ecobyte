@@ -1597,10 +1597,8 @@ html { scroll-behavior: smooth; }
 /*qr-code*/
 
 .fundo_qr {
-    border: 1px solid var(--cor-matriz);
     border-radius: 10px;
     display: grid;
-    
     gap: 20px;
     width: 100%;
     padding: 20px;
@@ -1614,19 +1612,22 @@ box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: linear-gradient(var(--cor-matriz-escura), var(--cor-matriz));
     gap: 10px;
     overflow: visible;
     min-height: 300px;
     border-radius: 10px;
     padding: 10px;
-    background-color: var(--cor-matriz-escura);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s ease;
 }
+.qr-convite {
+    color: var(--cor-matriz);
+    font-size: 2em;
+    font-family: var(--font-title);
+    font-weight: 500;
+}
 
 .bg_qr{
-  background-color: #135a3a;
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -1637,13 +1638,6 @@ box-sizing: border-box;
     gap: 10px;
 
 
-}
-
-
-.desc_qr{
-
-    color: white;
-    font-weight: 600;
 }
 
 .foto_qr{
