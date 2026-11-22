@@ -14,6 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
     <!-- JS -->
     <script src="JS/cabecalho.js" defer></script>
+    <script src="JS/quiz.js" defer></script>
 </head>
 <body>
     <!-- TAGS SEMANTICAS -->
@@ -264,11 +265,33 @@ lítio e hidróxido de lítio, em relação a 2022.
     <figure class="dado-imagem">
         <img src="img/dados/mina_de_litio.jpg" alt="Mina de lítio no Deserto do Atacama, Chile">
     </figure>
+ </div>
 
 </article>
+ <!-- QUIZ -->
+<section class="quiz-secao" id="quiz">
+
+    <div class="intro">
+        <span class="etiqueta-faq">[QUIZ]</span>
+        <h1>TESTE SEUS CONHECIMENTOS</h1>
+        <p>
+            Responda 5 perguntas rápidas sobre os dados que reunimos nesta página e veja quanto você sabe sobre o lítio!
+        </p>
+    </div>
+
+    <div class="tabela-card quiz-card">
+        <p class="artigos-contagem" id="quiz-progresso"></p>
+        <h3 id="quiz-pergunta"></h3>
+
+        <div class="quiz-opcoes" id="quiz-opcoes" role="group" aria-labelledby="quiz-pergunta"></div>
+
+        <p class="status-form" id="quiz-feedback" aria-live="polite"></p>
+        <button type="button" class="quiz-botao" id="quiz-proxima" hidden>PRÓXIMA</button>
+
+</section>
 
              <section class="descubra-dados">
-            <h5 class="title-descubrahome">DESCUBRA MAIS SOBRE NOSSO PROJETO</h5>
+        <h5 class="title-descubrahome">DESCUBRA MAIS SOBRE NOSSO PROJETO</h5>
             <div class="container-cards-dados">
                 
                 <div class="card-home">
